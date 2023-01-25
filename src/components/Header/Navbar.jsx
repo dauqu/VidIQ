@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../assets/css/navbar.css";
 import { RxCross1 } from "react-icons/rx";
-import { AiFillCaretDown, AiOutlineMenu } from "react-icons/ai";
+import { GrMenu } from "react-icons/gr";
+import { AiFillCaretDown, AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import axios from "axios";
 import logo from "../assets/images/logo.svg";
 import { BiChevronDown } from "react-icons/bi";
@@ -108,8 +109,6 @@ export default function Navbar() {
               </div>
             </li>
 
-            
-
             <li className="px-2    ">
               <button className=" bg-[#2B9DFF] hover:bg-[#2B9DFF] p-2 rounded-full px-6 text-center  text-white font-bold ">
                 Login
@@ -128,7 +127,7 @@ export default function Navbar() {
               setClose(true);
             }}
           >
-            Menu
+            <AiOutlineMenu size={25} color="#fff" />
           </div>
           <div
             className={
@@ -141,30 +140,45 @@ export default function Navbar() {
               setMenu(false);
             }}
           >
-            Close
+            <AiOutlineClose size={25} color="#fff" />
           </div>
         </div>
 
         <div
           className={
-            menu ? "bg-[#121521] lg:hidden block overflow-hidden" : "hidden"
+            menu ? "bg-[#121521] h-[100vh] lg:hidden block overflow-hidden" : "hidden"
           }
         >
           <ul className="text-white py-[20px]">
-            <li
-              className="h-[40px] text-white cursor-pointer"
+            <li className="h-[40px] text-white cursor-pointer">
+              <div className="flex items-center justify-between">
+                <p className="px-4">Home</p>
+              </div>
+            </li>
+            <li className="h-[40px] text-white cursor-pointer">
+              <div className="flex items-center justify-between">
+                <p className="px-4">Contact</p>
+              </div>
+            </li>
+            <li className="h-[40px] text-white cursor-pointer">
+              <div className="flex items-center justify-between">
+                <p className="px-4">About</p>
+              </div>
+            </li>
+            {/* <li
+              className="h-[40px] text-white  cursor-pointer"
               onClick={() => {
                 setMlink1();
               }}
             >
-              <div className="flex items-center justify-between z-0">
-                <p className="px-4">Dropship</p>
+              <div className="flex items-center justify-between z-0   ">
+                <p className="px-4">About</p>
                 <AiFillCaretDown size={15} color="white" className="ml-[2px]" />
               </div>
               <div
                 className={
                   link1
-                    ? "flex bg-white text-white rounded-md shadow-xl w-full z-10 absolute"
+                    ? "flex bg-white  text-white rounded-md shadow-xl w-full z-10 absolute"
                     : "hidden"
                 }
               >
@@ -173,82 +187,7 @@ export default function Navbar() {
                   <li>Link2</li>
                 </ul>
               </div>
-            </li>
-            <li
-              className="h-[40px] text-white cursor-pointer"
-              onClick={() => {
-                setMlink2();
-              }}
-            >
-              <div className="flex items-center justify-between z-0">
-                <p className="px-4">Integrations</p>
-                <AiFillCaretDown size={15} color="white" className="ml-[2px]" />
-              </div>
-              <div
-                className={
-                  link2
-                    ? "block text-white rounded-md shadow-xl w-full z-10 absolute"
-                    : "hidden"
-                }
-              >
-                <ul className="m-4">
-                  <li>Link1</li>
-                  <li>Link2</li>
-                </ul>
-              </div>
-            </li>
-            <li
-              className="h-[40px] text-white cursor-pointer"
-              onClick={() => setMlink3()}
-            >
-              <div className="flex items-center justify-between z-0">
-                <p className="px-4">Partnerships</p>
-                <AiFillCaretDown size={15} color="white" className="ml-[2px]" />
-              </div>
-              <div
-                className={
-                  link3
-                    ? "block text-white rounded-md shadow-xl w-full z-10 absolute"
-                    : "hidden"
-                }
-              >
-                <ul className="m-4">
-                  <li>Link1</li>
-                  <li>Link2</li>
-                </ul>
-              </div>
-            </li>
-            <li className="h-[40px] text-white cursor-pointer">
-              <div className="flex items-center justify-between">
-                <p className="mx-4">Winning Products</p>
-              </div>
-            </li>
-            <li
-              className="h-[40px] text-white cursor-pointer"
-              onClick={() => setMlink4()}
-            >
-              <div className="flex items-center justify-between">
-                <p className="px-4">Resources</p>
-                <AiFillCaretDown size={15} color="white" className="ml-[2px]" />
-              </div>
-              <div
-                className={
-                  link4
-                    ? "block text-white rounded-md shadow-xl w-full z-10 absolute"
-                    : "hidden"
-                }
-              >
-                <ul className="m-4">
-                  <li>Link1</li>
-                  <li>Link2</li>
-                </ul>
-              </div>
-            </li>
-            <li className="h-[40px] text-white cursor-pointer">
-              <div className="flex items-center justify-between">
-                <p className="px-4">Pricing</p>
-              </div>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>
