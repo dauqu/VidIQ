@@ -12,7 +12,7 @@ function Footer() {
     <div className="bg-[#121521]">
       <div className="md:w-[80%] w-full m-auto pt-[50px]">
         <div className="md:flex justify-around    py-[20px]">
-          <div className="w-[350px]">
+          <div className="w-[350px] md:m-0 m-auto">
             <div>
               <img src={logo} alt="" className="md:w-[50%] " />
             </div>
@@ -27,14 +27,14 @@ function Footer() {
               © 2023 vidIQ. All Rights Reserved.
             </div>
           </div>
-          <div className="w-[450px] flex  justify-evenly ">
-            <div className="md:w-[30%]">
+          <div className="md:w-[450px] w-[350px] md:m-0 m-auto md:mt-0 mt-6 flex flex-wrap  justify-evenly ">
+            <div className="md:w-[30%] w-[350px]  ">
               <div className="font-bold text-[20px] text-white">Company</div>
               <div className="mt-2 text-[18px] text-[#656C77]">Careers</div>
               <div className="mt-2 text-[18px] text-[#656C77]">Careers</div>
               <div className="mt-2 text-[18px] text-[#656C77]">Careers</div>
             </div>
-            <div className="md:w-[30%]">
+            <div className="md:w-[30%] w-[350px]">
               <div className="font-bold text-[20px] text-white">Product</div>
               <div className="mt-2 text-[18px] text-[#656C77]">Affiliates</div>
               <div className="mt-2 text-[18px] text-[#656C77]">
@@ -53,18 +53,16 @@ function Footer() {
                 vidIQ Academy
               </div>
             </div>
-            <div className="md:w-[30%]">
+            <div className="md:w-[30%] w-[350px]">
               <div className="font-bold text-[20px] text-white">Other</div>
               <div className="mt-2 text-[18px] text-[#656C77]">Contact</div>
               <div className="mt-2 text-[18px] text-[#656C77]">Terms</div>
               <div className="mt-2 text-[18px] text-[#656C77]">Privacy</div>
               <div className="mt-2 text-[18px] text-[#656C77]">Support</div>
-              <div className="mt-2 text-[18px] text-[#656C77]">
-                How To Get More YouTube Views
-              </div>
+              <div className="mt-2 text-[18px] text-[#656C77]">YouTube</div>
             </div>
           </div>
-          <div className="w-[350px]  ">
+          <div className="w-[350px] md:m-0 m-auto  ">
             <div className="font-bold text-[20px] text-white">
               Connect with us
             </div>
@@ -88,13 +86,27 @@ function Footer() {
           </div>
         </div>
         <div className=" flex flex-wrap p-8">
-          <div className="m-4 text-white text-[18px] cursor-pointer">English</div>
-          <div className="m-4 text-white text-[18px] cursor-pointer">Français</div>
-          <div className="m-4 text-white text-[18px] cursor-pointer">Español</div>
-          <div className="m-4 text-white text-[18px] cursor-pointer">Русский</div>
-          <div className="m-4 text-white text-[18px] cursor-pointer">Português</div>
-          <div className="m-4 text-white text-[18px] cursor-pointer">Türkçe</div>
-          <div className="m-4 text-white text-[18px] cursor-pointer">Tiếng Việt</div>
+          <div className="m-4 text-white text-[18px] cursor-pointer">
+            English
+          </div>
+          <div className="m-4 text-white text-[18px] cursor-pointer">
+            Français
+          </div>
+          <div className="m-4 text-white text-[18px] cursor-pointer">
+            Español
+          </div>
+          <div className="m-4 text-white text-[18px] cursor-pointer">
+            Русский
+          </div>
+          <div className="m-4 text-white text-[18px] cursor-pointer">
+            Português
+          </div>
+          <div className="m-4 text-white text-[18px] cursor-pointer">
+            Türkçe
+          </div>
+          <div className="m-4 text-white text-[18px] cursor-pointer">
+            Tiếng Việt
+          </div>
         </div>
       </div>
     </div>
