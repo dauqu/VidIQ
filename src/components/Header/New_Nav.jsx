@@ -62,9 +62,11 @@ export default function New_Nav() {
     <>
       <nav className="w-full fixed z-10 top-0 bg-gradient-to-b from-[#660E9F] p-4 to-[#25023A00]   overflow-hidden lg:overflow-visible">
         <div className="lg:max-w-[1200px] m-auto   flex   justify-between items-center md:px-4">
-          <div className="h-[32px] cursor-pointer">
-            <img src={logo} className="h-full" />
-          </div>
+          <Link to="/">
+            <div className="h-[32px] cursor-pointer">
+              <img src={logo} className="h-full" />
+            </div>
+          </Link>
           <ul className="lg:flex hidden items-center font-medium h-[30px]">
             <li className="px-2 cursor-pointer h-[30px] m-2  w-[90px]">
               <div className="flex items-center">
@@ -165,6 +167,15 @@ export default function New_Nav() {
             <li className="h-[40px] text-white cursor-pointer">
               <div className="flex items-center justify-between">
                 <p className="px-4">About</p>
+              </div>
+            </li>
+            <li className="h-[40px] text-white cursor-pointer">
+              <div className="flex items-center">
+                <Link to="/dashboard">
+                  <button className=" bg-[#2B9DFF] hover:bg-[#2B9DFF] p-2 rounded-full px-6 text-center  text-white font-bold ">
+                    Get Started
+                  </button>
+                </Link>
               </div>
             </li>
           </ul>
