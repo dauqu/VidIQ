@@ -33,12 +33,12 @@ function Panel_header({ children }) {
           className="bg-gray-600 mt-12   text-gray-100 flex justify-between md:hidden"
           data-dev-hint="mobile menu bar"
         >
-          <a
-            href="#"
+          <Link
+            to="/"
             className="block  p-4 text-white font-bold whitespace-nowrap truncate"
           >
             VidIQ
-          </a>
+          </Link>
           <label
             htmlFor="menu-open"
             id="mobile-menu-button"
@@ -85,8 +85,8 @@ function Panel_header({ children }) {
             className="flex flex-col space-y-6"
             data-dev-hint="optional div for having an extra footer navigation"
           >
-            <a
-              href="#"
+            <Link
+              to="/"
               className="text-white flex items-center space-x-2 px-4 py-12  "
               title="Your App is cool"
             >
@@ -107,7 +107,7 @@ function Panel_header({ children }) {
               <span className="text-2xl font-extrabold whitespace-nowrap truncate">
                 VidIQ
               </span>
-            </a>
+            </Link>
             <nav data-dev-hint="main navigation">
               <Link
                 to="/dashboard"
@@ -115,13 +115,6 @@ function Panel_header({ children }) {
               >
                 <BiImageAdd />
                 <span>Upload File</span>
-              </Link>
-              <Link
-                to="/viewfile"
-                className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white"
-              >
-                <BsImages />
-                <span>View File</span>
               </Link>
             </nav>
           </div>

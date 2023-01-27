@@ -68,11 +68,13 @@ export default function New_Nav() {
             </div>
           </Link>
           <ul className="lg:flex hidden items-center font-medium h-[30px]">
-            <li className="px-2 cursor-pointer h-[30px] m-2  w-[90px]">
-              <div className="flex items-center">
-                <p className="text-white">Home</p>
-              </div>
-            </li>
+            <Link to="/">
+              <li className="px-2 cursor-pointer h-[30px] m-2  w-[90px]">
+                <div className="flex items-center">
+                  <p className="text-white">Home</p>
+                </div>
+              </li>
+            </Link>
             <li className="px-2 cursor-pointer h-[30px] m-2  w-[90px]">
               <div className="flex items-center">
                 <p className="text-white">Contact</p>
@@ -89,7 +91,7 @@ export default function New_Nav() {
                 <AiFillCaretDown size={15} color="white" className="ml-[2px]" />
               </div>
               <div className={link2 ? "block" : "hidden"}>
-                <ul className="listitems p-4  mt-2     w-[170px]  rounded-md">
+                <ul className="listitems p-4  mt-2  bg-black     w-[170px]  rounded-md">
                   <li className="text-[#9A9EA8] text-[15px] hover:text-fuchsia-100">
                     View
                   </li>

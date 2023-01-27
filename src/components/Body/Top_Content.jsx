@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import bg2 from "../assets/images/bg2.jpg";
 import google from "../assets/images/google2.png";
 import { BsArrowRightShort, BsCloudDownloadFill } from "react-icons/bs";
-function Top_Content() {
+import { useSelector } from "react-redux";
+
+const Top_Content = () => {
+  const { videos } = useSelector((state) => state.video);
   return (
     <div className="LandingPageContent">
       <div className="md:flex justify-between md:w-[80%] m-auto md:mt-36 mt-12 w-full p-4">
         <div className="md:w-[60%] w-full  ">
           <div className="md:w-[100%] m-auto w-full md:text-[40px] text-[23px] font-extrabold  text-black">
-          Create recaps and promos<br/> by identifying important moments using AI
+            Create recaps and promos
+            <br /> by identifying important moments using AI
           </div>
           <div className="md:w-[100%] flex flex-wrap  m-auto w-full md:text-[22px]  text-[17px] font-semibold">
             <div className="card md:m-2  md:mt:0 mt-4 md:w-80  w-72  m-auto bg-[#cea9fe] ">
@@ -17,7 +21,10 @@ function Top_Content() {
               </figure>
               <div className="card-body items-center text-center">
                 <h2 className="card-title">PromoTrail AI</h2>
-                <p>Get output video in any specific resolution without the need of re-filming👍</p>
+                <p>
+                  Get output video in any specific resolution without the need
+                  of re-filming👍
+                </p>
               </div>
             </div>
             <div className="card md:m-2  md:mt:0 mt-4 md:w-80  w-72  m-auto bg-[#fecca9] ">
@@ -26,11 +33,15 @@ function Top_Content() {
               </figure>
               <div className="card-body items-center text-center">
                 <h2 className="card-title">PromoTrail AI</h2>
-                <p>Taking care of script, sound & visual emotion factors to create video highlights👍</p>
+                <p>
+                  Taking care of script, sound & visual emotion factors to
+                  create video highlights👍
+                </p>
               </div>
             </div>
           </div>
         </div>
+
         <div className="md:w-[40%] md:mt-0 mt-8 w-full  ">
           <div className=" m-auto w-full   ">
             <button className="flex items-center justify-center w-full border border-[#2B99F9] rounded-full m-auto bg-[#2D3756] p-4 ">
@@ -81,8 +92,29 @@ function Top_Content() {
           </div>
         </div>
       </div>
+      <div className="   md:w-[80%] m-auto md:mt-36 mt-12 w-full p-4">
+        <div className="font-bold md:text-[30px] text-[20px] ">Video's</div>
+        {/* <div className="flex flex-wrap ">
+          <div className="w-[300px] m-2">
+            {videos.map((video) => (
+              <video controls>
+                <source src={video} />
+              </video>
+            ))}
+          </div>
+        </div> */}
+        <div className="flex flex-wrap mt-6 p-2">
+          {videos.map((video) => (
+            <div className="w-[300px] md:m-4 hover:shadow-2xl   cursor-pointer shadow-2xl">
+              <video controls>
+                <source src={video} />
+              </video>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default Top_Content;
