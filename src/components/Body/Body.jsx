@@ -7,13 +7,13 @@ function Body() {
   return (
     <div>
       <div
-        style={{
-          backgroundImage: `url(${bg2})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          height: "100vh",
-        }}
+        // style={{
+        //   backgroundColor: "white",
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "center",
+        //   backgroundRepeat: "no-repeat",
+        //   height: "100vh",
+        // }}
       >
         <Navbar />
         <Top_Content />

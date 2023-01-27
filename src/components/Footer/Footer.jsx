@@ -9,33 +9,33 @@ import logo from "../assets/images/logo.svg";
 
 function Footer() {
   return (
-    <div className="bg-[#121521]">
-      <div className="md:w-[80%] w-full m-auto pt-[50px]">
+    <div className="bg-[#f7f7f7] mt-24">
+      <div className="md:w-[90%] md:p-0 p-4 w-full m-auto pt-[50px]">
         <div className="md:flex justify-around    py-[20px]">
-          <div className="w-[350px] md:m-0 m-auto">
-            <div>
-              <img src={logo} alt="" className="md:w-[50%] " />
+          <div className="md:w-[450px] w-[300px] md:m-0 ">
+            <div className=" font-extrabold text-[25px] text-black ">
+               VidIQ
             </div>
-            <div className="mt-12 text-white text-[17px]">
+            <div className="mt-4 text-black text-[17px]">
               Our mission is to empower every video creator with the insights
               and inspiration they need to grow. That’s why we’re obsessed with
               providing an intelligent mix of technological and human expertise
               that boosts your productivity and gets you more views. Whatever
               your next challenge, we’ll shine a light on the way forward
             </div>
-            <div className="mt-12 text-white text-[17px]">
+            <div className="mt-12 text-black text-[17px]">
               © 2023 vidIQ. All Rights Reserved.
             </div>
           </div>
-          <div className="md:w-[450px] w-[350px] md:m-0 m-auto md:mt-0 mt-6 flex flex-wrap  justify-evenly ">
-            <div className="md:w-[30%] w-[350px]  ">
-              <div className="font-bold text-[20px] text-white">Company</div>
+          <div className="md:w-[450px] w-[300px] md:m-0  md:mt-0 mt-6 flex flex-wrap  justify-evenly ">
+            <div className="md:w-[30%] w-[300px] md:mt-0 mt-4  ">
+              <div className="font-bold text-[20px] text-black">Company</div>
               <div className="mt-2 text-[18px] text-[#656C77]">Careers</div>
               <div className="mt-2 text-[18px] text-[#656C77]">Careers</div>
               <div className="mt-2 text-[18px] text-[#656C77]">Careers</div>
             </div>
-            <div className="md:w-[30%] w-[350px]">
-              <div className="font-bold text-[20px] text-white">Product</div>
+            <div className="md:w-[30%] w-[300px] md:mt-0 mt-4">
+              <div className="font-bold text-[20px] text-black">Product</div>
               <div className="mt-2 text-[18px] text-[#656C77]">Affiliates</div>
               <div className="mt-2 text-[18px] text-[#656C77]">
                 Brand Solutions
@@ -53,8 +53,8 @@ function Footer() {
                 vidIQ Academy
               </div>
             </div>
-            <div className="md:w-[30%] w-[350px]">
-              <div className="font-bold text-[20px] text-white">Other</div>
+            <div className="md:w-[30%] w-[300px] md:mt-0 mt-4">
+              <div className="font-bold text-[20px] text-black">Other</div>
               <div className="mt-2 text-[18px] text-[#656C77]">Contact</div>
               <div className="mt-2 text-[18px] text-[#656C77]">Terms</div>
               <div className="mt-2 text-[18px] text-[#656C77]">Privacy</div>
@@ -62,14 +62,14 @@ function Footer() {
               <div className="mt-2 text-[18px] text-[#656C77]">YouTube</div>
             </div>
           </div>
-          <div className="w-[350px] md:m-0 m-auto  ">
-            <div className="font-bold text-[20px] text-white">
+          <div className="w-[350px] md:m-0 md:mt-0 mt-6 md:p-0 p-2    ">
+            <div className="font-bold text-[20px] text-black">
               Connect with us
             </div>
-            <div className="mt-4 text-white text-[19px]">
+            <div className="mt-4 text-black text-[19px]">
               Call Sales 888-998-VIDIQ (8434)
             </div>
-            <div className="mt-12 flex flex-wrap text-white text-[17px]">
+            <div className="md:mt-12 mt-6 flex flex-wrap text-black text-[17px]">
               <div className="m-4 cursor-pointer">
                 <AiFillYoutube size={30} />
               </div>
@@ -85,26 +85,26 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className=" flex flex-wrap p-8">
-          <div className="m-4 text-white text-[18px] cursor-pointer">
+        <div className=" flex flex-wrap md:p-8">
+          <div className="m-4 text-black text-[18px] cursor-pointer">
             English
           </div>
-          <div className="m-4 text-white text-[18px] cursor-pointer">
+          <div className="m-4 text-black text-[18px] cursor-pointer">
             Français
           </div>
-          <div className="m-4 text-white text-[18px] cursor-pointer">
+          <div className="m-4 text-black text-[18px] cursor-pointer">
             Español
           </div>
-          <div className="m-4 text-white text-[18px] cursor-pointer">
+          <div className="m-4 text-black text-[18px] cursor-pointer">
             Русский
           </div>
-          <div className="m-4 text-white text-[18px] cursor-pointer">
+          <div className="m-4 text-black text-[18px] cursor-pointer">
             Português
           </div>
-          <div className="m-4 text-white text-[18px] cursor-pointer">
+          <div className="m-4 text-black text-[18px] cursor-pointer">
             Türkçe
           </div>
-          <div className="m-4 text-white text-[18px] cursor-pointer">
+          <div className="m-4 text-black text-[18px] cursor-pointer">
             Tiếng Việt
           </div>
         </div>
