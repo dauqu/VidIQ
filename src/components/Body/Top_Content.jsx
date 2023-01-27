@@ -4,11 +4,11 @@ import google from "../assets/images/google2.png";
 import { BsArrowRightShort, BsCloudDownloadFill } from "react-icons/bs";
 function Top_Content() {
   return (
-    <div>
+    <div className="LandingPageContent">
       <div className="md:flex justify-between md:w-[80%] m-auto md:mt-36 mt-12 w-full p-4">
         <div className="md:w-[60%] w-full  ">
           <div className="md:w-[100%] m-auto w-full md:text-[40px] text-[23px] font-extrabold  text-black">
-            Designed to boost your YouTube views
+          Create recaps and promos<br/> by identifying important moments using AI
           </div>
           <div className="md:w-[100%] flex flex-wrap  m-auto w-full md:text-[22px]  text-[17px] font-semibold">
             <div className="card md:m-2  md:mt:0 mt-4 md:w-80  w-72  m-auto bg-[#cea9fe] ">
@@ -16,8 +16,8 @@ function Top_Content() {
                 <BsCloudDownloadFill size={50} />
               </figure>
               <div className="card-body items-center text-center">
-                <h2 className="card-title">10K Downloads</h2>
-                <p>They all are satisfied with our service 👍</p>
+                <h2 className="card-title">PromoTrail AI</h2>
+                <p>Get output video in any specific resolution without the need of re-filming👍</p>
               </div>
             </div>
             <div className="card md:m-2  md:mt:0 mt-4 md:w-80  w-72  m-auto bg-[#fecca9] ">
@@ -25,8 +25,8 @@ function Top_Content() {
                 <BsCloudDownloadFill size={50} />
               </figure>
               <div className="card-body items-center text-center">
-                <h2 className="card-title">10K Downloads</h2>
-                <p>They all are satisfied with our service 👍</p>
+                <h2 className="card-title">PromoTrail AI</h2>
+                <p>Taking care of script, sound & visual emotion factors to create video highlights👍</p>
               </div>
             </div>
           </div>
