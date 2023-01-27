@@ -1,26 +1,25 @@
 import React from "react";
-import Navbar from "../Header/Navbar";
 import Top_Content from "./Top_Content";
 import bg2 from "../assets/images/bg2.jpg";
 import Footer from "../Footer/Footer";
+import New_Nav from "../Header/New_Nav";
 function Body() {
   return (
     <div>
       <div
-        // style={{
-        //   backgroundColor: "white",
-        //   backgroundSize: "cover",
-        //   backgroundPosition: "center",
-        //   backgroundRepeat: "no-repeat",
-        //   height: "100vh",
-        // }}
+      // style={{
+      //   backgroundColor: "white",
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      //   backgroundRepeat: "no-repeat",
+      //   height: "100vh",
+      // }}
       >
-        <Navbar />
+        <New_Nav />
         <Top_Content />
       </div>
       <div>
-        <Footer />
-      </div>
+        <Footer /></div>
     </div>
   );
 }
