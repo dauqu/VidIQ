@@ -17,56 +17,56 @@ function ViewFile() {
               View Uploaded File's
             </div>
             <div className="px-4 py-6 sm:px-0">
-              <div className="flex flex-wrap">
-                <div className="md:w[300px] m-4 cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
+              <div className="flex flex-wrap md:justify-start justify-around">
+                <div className="md:w[300px] md:m-4 m-[2px] cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
                   <BsCardImage size={100} className="text-gray-700 hover:text-black"  />
                 </div>
-                <div className="md:w[300px] m-4 cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
+                <div className="md:w[300px] md:m-4 m-[2px] cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
                   <BsCardImage size={100} className="text-gray-700 hover:text-black"  />
                 </div>
-                <div className="md:w[300px] m-4 cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
+                <div className="md:w[300px] md:m-4 m-[2px] cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
                   <BsCardImage size={100} className="text-gray-700 hover:text-black"  />
                 </div>
-                <div className="md:w[300px] m-4 cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
+                <div className="md:w[300px] md:m-4 m-[2px] cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
                   <BsCardImage size={100} className="text-gray-700 hover:text-black"  />
                 </div>
-                <div className="md:w[300px] m-4 cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
+                <div className="md:w[300px] md:m-4 m-[2px] cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
                   <BsCardImage size={100} className="text-gray-700 hover:text-black"  />
                 </div>
-                <div className="md:w[300px] m-4 cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
+                <div className="md:w[300px] md:m-4 m-[2px] cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
                   <BsCardImage size={100} className="text-gray-700 hover:text-black"  />
                 </div>
-                <div className="md:w[300px] m-4 cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
+                <div className="md:w[300px] md:m-4 m-[2px] cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
                   <BsCardImage size={100} className="text-gray-700 hover:text-black"  />
                 </div>
-                <div className="md:w[300px] m-4 cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
+                <div className="md:w[300px] md:m-4 m-[2px] cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
                   <BsCardImage size={100} className="text-gray-700 hover:text-black"  />
                 </div>
-                <div className="md:w[300px] m-4 cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
+                <div className="md:w[300px] md:m-4 m-[2px] cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
                   <BsCardImage size={100} className="text-gray-700 hover:text-black"  />
                 </div>
-                <div className="md:w[300px] m-4 cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
+                <div className="md:w[300px] md:m-4 m-[2px] cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
                   <BsCardImage size={100} className="text-gray-700 hover:text-black"  />
                 </div>
-                <div className="md:w[300px] m-4 cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
+                <div className="md:w[300px] md:m-4 m-[2px] cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
                   <BsCardImage size={100} className="text-gray-700 hover:text-black"  />
                 </div>
-                <div className="md:w[300px] m-4 cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
+                <div className="md:w[300px] md:m-4 m-[2px] cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
                   <BsCardImage size={100} className="text-gray-700 hover:text-black"  />
                 </div>
-                <div className="md:w[300px] m-4 cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
+                <div className="md:w[300px] md:m-4 m-[2px] cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
                   <BsCardImage size={100} className="text-gray-700 hover:text-black"  />
                 </div>
-                <div className="md:w[300px] m-4 cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
+                <div className="md:w[300px] md:m-4 m-[2px] cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
                   <BsCardImage size={100} className="text-gray-700 hover:text-black"  />
                 </div>
-                <div className="md:w[300px] m-4 cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
+                <div className="md:w[300px] md:m-4 m-[2px] cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
                   <BsCardImage size={100} className="text-gray-700 hover:text-black"  />
                 </div>
-                <div className="md:w[300px] m-4 cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
+                <div className="md:w[300px] md:m-4 m-[2px] cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
                   <BsCardImage size={100} className="text-gray-700 hover:text-black"  />
                 </div>
-                <div className="md:w[300px] m-4 cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
+                <div className="md:w[300px] md:m-4 m-[2px] cursor-pointer  bg-[#fafafa] shadow-lg hover:shadow-slate-400 p-2">
                   <BsCardImage size={100} className="text-gray-700 hover:text-black"  />
                 </div>
               </div>
