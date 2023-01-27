@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "../assets/css/navbar.css";
+import "../assets/css/panel.css";
 
 import { RxCross1 } from "react-icons/rx";
 import { AiFillCaretDown, AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import axios from "axios";
 import { BiChevronDown } from "react-icons/bi";
 import logo from "../assets/images/logo.svg";
-export default function Navbar() {
+export default function New_Nav() {
   const [toggle, setToggle] = useState(false);
 
   const handleToggle = () => {
@@ -61,7 +61,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="w-full fixed z-10 top-0 bg-gradient-to-b from-[#660E9F] p-4 to-[#25023A00]   overflow-hidden lg:overflow-visible">
-        <div className="lg:max-w-[1200px] m-auto   flex   justify-between items-center px-4">
+        <div className="lg:max-w-[1200px] m-auto   flex   justify-between items-center md:px-4">
           <div className="h-[32px] cursor-pointer">
             <img src={logo} className="h-full" />
           </div>
@@ -108,9 +108,11 @@ export default function Navbar() {
             </li>
 
             <li className="px-2    ">
-              <button className=" bg-[#2B9DFF] hover:bg-[#2B9DFF] p-2 rounded-full px-6 text-center  text-white font-bold ">
-             Login
-              </button>
+              <Link to="/dashboard">
+                <button className=" bg-[#2B9DFF] hover:bg-[#2B9DFF] p-2 rounded-full px-6 text-center  text-white font-bold ">
+                  Get Started
+                </button>
+              </Link>
             </li>
           </ul>
 
