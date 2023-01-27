@@ -61,8 +61,8 @@ export default function Navbar() {
   };
 
   return (
-    <div>
-      <nav className="w-full fixed top-0  z-10 bg-gradient-to-b from-[#660E9F] to-[#25023A00] pt-4 overflow-hidden lg:overflow-visible">
+    <div className="topBar">
+      <nav className="w-full fixed top-0  z-10 bg-gradient-to-b from-[#660E9F] to-[#25023A00] pt-4 overflow-hidden lg:overflow-visible" style={{height:'75px'}}>
         <div className="lg:max-w-[1200px] m-auto p-2   flex   justify-between items-center px-4">
           <div className="h-[32px] cursor-pointer">
             <img src={logo} className="h-full" />
@@ -111,7 +111,7 @@ export default function Navbar() {
 
             <li className="px-2    ">
               <button className=" bg-[#2B9DFF] hover:bg-[#2B9DFF] p-2 rounded-full px-6 text-center  text-white font-bold ">
-                Login
+                Get Started
               </button>
             </li>
           </ul>
