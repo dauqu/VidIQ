@@ -66,6 +66,7 @@ export default function Navbar() {
         <div className="lg:max-w-[1200px] m-auto p-2   flex   justify-between items-center px-4">
           <div className="h-[32px] cursor-pointer">
             <img src={logo} className="h-full" />
+            {/* s */}
           </div>
           <ul className="lg:flex hidden items-center font-medium h-[30px]">
             <li className="px-2 cursor-pointer h-[30px] m-2  w-[90px]">
