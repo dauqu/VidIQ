@@ -14,7 +14,7 @@ function Footer() {
         <div className="md:flex justify-around    py-[20px]">
           <div className="md:w-[450px] w-[300px] md:m-0 ">
             <div className=" font-extrabold text-[25px] text-black ">
-               VidIQ
+              PromoTrail
             </div>
             <div className="mt-4 text-black text-[17px]">
               Our mission is to empower every video creator with the insights

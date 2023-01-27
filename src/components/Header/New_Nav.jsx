@@ -7,6 +7,7 @@ import { AiFillCaretDown, AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import axios from "axios";
 import { BiChevronDown } from "react-icons/bi";
 import logo from "../assets/images/logo.svg";
+import logomain from "../assets/images/lg1.png";
 export default function New_Nav() {
   const [toggle, setToggle] = useState(false);
 
@@ -64,7 +65,7 @@ export default function New_Nav() {
         <div className="lg:max-w-[1200px] m-auto   flex   justify-between items-center md:px-4">
           <Link to="/">
             <div className="h-[32px] cursor-pointer">
-              <img src={logo} className="h-full" />
+              <img src={logomain} className="h-full" />
             </div>
           </Link>
           <ul className="lg:flex hidden items-center font-medium h-[30px]">
