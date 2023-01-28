@@ -2,7 +2,7 @@ import React from "react";
 import { BiImageAdd } from "react-icons/bi";
 import { BsImages } from "react-icons/bs";
 import { Link } from "react-router-dom";
-
+import lg from "../assets/images/lg2.png";
 function Panel_header({ children }) {
   return (
     <div>
@@ -37,7 +37,7 @@ function Panel_header({ children }) {
             to="/"
             className="block  p-4 text-white font-bold whitespace-nowrap truncate"
           >
-            VidIQ
+           <img src={lg} alt="" className="w-[50%]" />
           </Link>
           <label
             htmlFor="menu-open"
@@ -105,7 +105,7 @@ function Panel_header({ children }) {
                 />
               </svg>
               <span className="text-2xl font-extrabold whitespace-nowrap truncate">
-                VidIQ
+                <img src={lg} alt="" className="w-[70%] " />
               </span>
             </Link>
             <nav data-dev-hint="main navigation">
