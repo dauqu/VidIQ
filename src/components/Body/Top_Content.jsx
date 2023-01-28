@@ -2,10 +2,18 @@ import React, { useEffect } from "react";
 import bg2 from "../assets/images/bg2.jpg";
 import google from "../assets/images/google2.png";
 import { BsArrowRightShort, BsCloudDownloadFill } from "react-icons/bs";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { getVideos } from "../../reducers/video";
 
 const Top_Content = () => {
   const { videos } = useSelector((state) => state.video);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+      dispatch(getVideos());
+
+  }, []);
+
   return (
     <div className="LandingPageContent">
       <div className="md:flex justify-between md:w-[80%] m-auto md:mt-36 mt-12 w-full p-4">
@@ -92,7 +100,7 @@ const Top_Content = () => {
           </div>
         </div>
       </div>
-      <div className="   md:w-[80%] m-auto md:mt-36 mt-12 w-full p-4">
+      <div className="   md:w-[80%]  m-auto md:mt-36 mt-12 w-full p-4">
         <div className="font-bold md:text-[30px] text-[20px] ">Video's</div>
         {/* <div className="flex flex-wrap ">
           <div className="w-[300px] m-2">
@@ -103,11 +111,11 @@ const Top_Content = () => {
             ))}
           </div>
         </div> */}
-        <div className="flex flex-wrap mt-6 p-2">
+        <div className="flex flex-wrap md:justify-start justify-center mt-6 p-2">
           {videos.map((video) => (
-            <div className="w-[300px] md:m-4 hover:shadow-2xl   cursor-pointer shadow-2xl">
+            <div className="md:w-[300px] w-[280px]  md:m-4 m-2 hover:shadow-2xl   cursor-pointer shadow-2xl">
               <video controls>
-                <source src={video} />
+                <source src={video.videoUrl} />
               </video>
             </div>
           ))}
