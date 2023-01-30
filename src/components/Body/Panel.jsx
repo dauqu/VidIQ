@@ -64,13 +64,13 @@ function Panel() {
         <main id="content" className="flex-1 p-6 lg:px-12 lg:py-24">
           <div className="max-w-7xl mx-auto">
             <div className="text-[20px] underline font-semibold">
-              Please  insert your video here.
+              Please insert your video here.
             </div>
             <div className="px-4 py-6 sm:px-0">
               {file ? (
                 <>
                   {" "}
-                  <div className="flex items-center h-96 flex-col justify-center border-4 border-dashed border-gray-200 rounded-lg   w-auto">
+                  <div className="flex items-center h-auto flex-col justify-center border-4 border-dashed border-gray-200 rounded-lg   w-auto">
                     <div>
                       {
                         // code to  display the uploaded video here
