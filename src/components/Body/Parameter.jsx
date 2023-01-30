@@ -12,25 +12,39 @@ function Parameter() {
         <Panel_header>
           <main id="content" className="flex-1 p-6 lg:px-12 lg:py-24">
             <div className="max-w-7xl mx-auto">
-              <div className="text-[20px] underline font-semibold">
-                Please insert your video here.
+              <div className="flex items-center justify-between ">
+                <div className="text-[20px] underline font-semibold">
+                  Select Parameters
+                </div>
+                <div className="ml-6">
+                  <div className="">
+                    <select name="" id="" className="bg-[#dbdbdb]  p-2">
+                      <option value="" className="bg-white">
+                        Types
+                      </option>
+                      <option value="" className="bg-white">
+                        Video
+                      </option>
+                      <option value="" className="bg-white">
+                        News
+                      </option>
+                      <option value="" className="bg-white">
+                        Webinar
+                      </option>
+                    </select>
+                  </div>
+                </div>
               </div>
               <div className="md:flex bg-[#dbdbdb] mt-6 justify-between items-center p-2">
-                <div className="font-semibold ">Percentage</div>
+                <div className="font-semibold ">Percentage (%)</div>
                 <div>
-                  <select name="" id="" className="  p-2">
-                    <option value="">Select</option>
-                    <option value="">10%</option>
-                    <option value="">20%</option>
-                    <option value="">30%</option>
-                    <option value="">40%</option>
-                    <option value="">50%</option>
-                    <option value="">60%</option>
-                    <option value="">70%</option>
-                    <option value="">80%</option>
-                    <option value="">90%</option>
-                    <option value="">100%</option>
-                  </select>
+                  <input
+                    type="number"
+                    name=""
+                    id=""
+                    className="h-[40px] p-2 w-[88px]"
+                    placeholder="100%"
+                  />
                 </div>
               </div>
             </div>
