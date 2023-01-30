@@ -12,7 +12,18 @@ function Summary() {
         <main id="content" className="flex-1 p-6 lg:px-12 lg:py-24">
           <div className="max-w-7xl mx-auto">
             <div className="text-[20px] underline font-semibold">
-              Please insert your video here.
+              Here is the summary of your file.
+            </div>
+            <div className="mt-6">
+              <pre>
+                <code>
+                  {`{
+  "video": {
+     "summary":"You fight like a younger man",
+   }
+}`}
+                </code>
+              </pre>
             </div>
           </div>
         </main>
