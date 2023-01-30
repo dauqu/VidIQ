@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 
 import Body from "./components/Body/Body";
 import Panel from "./components/Body/Panel";
+import Parameter from "./components/Body/Parameter";
 import ViewFile from "./components/Body/ViewFile";
 
 axios.defaults.withCredentials = true;
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Body />} />
         <Route path="/dashboard" element={<Panel />} />
         <Route path="/viewfile" element={<ViewFile />} />
+        <Route path="/parameter" element={<Parameter />} />
         {/* <Route path="/login" element={<Login />} /> */}
         {/* <Route path="/signup" element={<Signup />} /> */}
       </Routes>
