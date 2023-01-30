@@ -20,7 +20,7 @@ function Summary() {
                   {`{
   "video": {
      "summary":"You fight like a younger man",
-   }
+  }
 }`}
                 </code>
               </pre>
