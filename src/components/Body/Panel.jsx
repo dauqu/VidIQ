@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import New_Nav from "../Header/New_Nav";
 import { CiImageOn } from "react-icons/ci";
 import { BsImages } from "react-icons/bs";
@@ -8,12 +8,17 @@ import axios from "axios";
 import { API } from "../Constant/API";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useDispatch } from "react-redux";
-import { addVideos } from "../../reducers/video";
+import { useDispatch, useSelector } from "react-redux";
+import { addVideos, getVideos } from "../../reducers/video";
 
 function Panel() {
   const [successnotify, setSuccessnotify] = useState(false);
+  const { videos } = useSelector((state) => state.video);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getVideos());
+  }, []);
 
   const notfiysuccess = () => {
     toast.success("Video Uploaded", {
@@ -62,12 +67,31 @@ function Panel() {
               Enter your file here.
             </div>
             <div className="px-4 py-6 sm:px-0">
-              <div className="flex items-center flex-col justify-center border-4 border-dashed border-gray-200 rounded-lg h-96">
-                <CiImageOn size={150} color="gray" />
-                <div className="md:text-[22px] text-[18px] font-semibold">
-                  You can upload your video here.
-                </div>
-              </div>
+              {file ? (
+                <>
+                  {" "}
+                  <div className="flex items-center flex-col justify-center border-4 border-dashed border-gray-200 rounded-lg h-auto w-auto">
+                    <div>
+                      {
+                        // code to  display the uploaded video here
+                        file && (
+                          <video src={URL.createObjectURL(file)} controls />
+                        )
+                      }
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <>
+                  {" "}
+                  <div className="flex items-center flex-col justify-center border-4 border-dashed border-gray-200 rounded-lg h-96">
+                    <CiImageOn size={150} color="gray" />
+                    <div className="md:text-[22px] text-[18px] font-semibold">
+                      You can upload your video here.
+                    </div>
+                  </div>
+                </>
+              )}
 
               <form onSubmit={(e) => handleVideoUpload(e)}>
                 <div className="flex items-center justify-between">
@@ -80,13 +104,16 @@ function Panel() {
                       className="mt-6 bg-[#f3f2f2] hover:bg-[#e6e6e6] w-full p-2 cursor-pointer"
                     />
                   </div>
-                  <div className="md:w-[25%] w-[25%]">
+                  <div className="md:w-[25%] hover:text-white w-[25%]">
                     <button
                       onSubmit={(e) => handleVideoUpload(e)}
-                      className="btn border-none text-black mt-6 flex font-semibold items-center justify-center bg-[#f3f2f2] hover:bg-[#e6e6e6] w-full p-2 cursor-pointer"
+                      className="btn border-none   text-black mt-6 flex font-semibold items-center justify-center bg-[#f3f2f2] hover:bg-[#853ab4] w-full p-2 cursor-pointer hover:text-white"
                     >
                       Upload{" "}
-                      <BiImageAdd size={27} color="gray" className="ml-2" />
+                      <BiImageAdd
+                        size={27}
+                        className="ml-2 hover:text-white "
+                      />
                     </button>
                   </div>
                 </div>

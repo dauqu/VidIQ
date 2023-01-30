@@ -10,8 +10,7 @@ const Top_Content = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-      dispatch(getVideos());
-
+    dispatch(getVideos());
   }, []);
 
   return (
@@ -100,17 +99,9 @@ const Top_Content = () => {
           </div>
         </div>
       </div>
-      <div className="   md:w-[80%]  m-auto md:mt-36 mt-12 w-full p-4">
+      <div className="   md:w-[90%]  m-auto md:mt-36 mt-12 w-full p-4">
         <div className="font-bold md:text-[30px] text-[20px] ">Video's</div>
-        {/* <div className="flex flex-wrap ">
-          <div className="w-[300px] m-2">
-            {videos.map((video) => (
-              <video controls>
-                <source src={video} />
-              </video>
-            ))}
-          </div>
-        </div> */}
+
         <div className="flex flex-wrap md:justify-start justify-center mt-6 p-2">
           {videos.map((video) => (
             <div className="md:w-[300px] w-[280px]  md:m-4 m-2 hover:shadow-2xl   cursor-pointer shadow-2xl">

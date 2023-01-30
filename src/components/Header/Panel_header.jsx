@@ -1,7 +1,10 @@
 import React from "react";
 import { BiImageAdd } from "react-icons/bi";
-import { BsImages } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { FiDownload } from "react-icons/fi";
+import { HiDocumentText } from "react-icons/hi";
+import { IoOptionsSharp } from "react-icons/io5";
+import { BsFillCloudDownloadFill, BsImages } from "react-icons/bs";
+import { Link, NavLink } from "react-router-dom";
 import lg from "../assets/images/lg2.png";
 function Panel_header({ children }) {
   return (
@@ -37,7 +40,7 @@ function Panel_header({ children }) {
             to="/"
             className="block  p-4 text-white font-bold whitespace-nowrap truncate"
           >
-           <img src={lg} alt="" className="w-[50%]" />
+            <img src={lg} alt="" className="w-[50%]" />
           </Link>
           <label
             htmlFor="menu-open"
@@ -115,6 +118,33 @@ function Panel_header({ children }) {
               >
                 <BiImageAdd />
                 <span>Upload File</span>
+              </Link>
+            </nav>
+            <nav data-dev-hint="main navigation">
+              <Link
+                to="/dashboard"
+                className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white"
+              >
+                <IoOptionsSharp />
+                <span>Select Parameter</span>
+              </Link>
+            </nav>
+            <nav data-dev-hint="main navigation">
+              <Link
+                to="/dashboard"
+                className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700   hover:text-white"
+              >
+                <HiDocumentText />
+                <span>Summary</span>
+              </Link>
+            </nav>
+            <nav data-dev-hint="main navigation">
+              <Link
+                to="/dashboard"
+                className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white"
+              >
+                <FiDownload />
+                <span>Download</span>
               </Link>
             </nav>
           </div>
