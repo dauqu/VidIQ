@@ -10,49 +10,29 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useDispatch, useSelector } from "react-redux";
 import { addVideos, getVideos } from "../../reducers/video";
-
+import loadingGIF from "../assets/images/round.gif";
 function Panel() {
   const [successnotify, setSuccessnotify] = useState(false);
-  const { videos } = useSelector((state) => state.video);
+  const { videos, loading, message } = useSelector((state) => state.video);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (message == "success") {
+      toast.success(message);
+    } else if (message == "error") {
+      toast.error(message);
+    }
+  }, [message]);
 
   useEffect(() => {
     dispatch(getVideos());
   }, []);
-
-  const notfiysuccess = () => {
-    toast.success("Video Uploaded", {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    });
-  };
 
   const [file, setFile] = React.useState(null);
 
   const handleVideoUpload = (e) => {
     e.preventDefault();
     dispatch(addVideos(file));
-    // const formData = new FormData();
-    // formData.append("video", file);
-
-    // console.log(formData);
-
-    // axios
-    //   .post(`${API}/upload/uploadVideo`, formData)
-    //   .then((res) => {
-    //     console.log(res);
-    //     setSuccessnotify(true);
-    //     notfiysuccess();
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
   };
 
   return (
@@ -97,6 +77,7 @@ function Panel() {
                 <div className="flex items-center justify-between">
                   <div className="md:w-[70%] w-[70%]">
                     <input
+                      required
                       type="file"
                       name="file"
                       id=""
@@ -105,16 +86,35 @@ function Panel() {
                     />
                   </div>
                   <div className="md:w-[25%] hover:text-white w-[25%]">
-                    <button
-                      onSubmit={(e) => handleVideoUpload(e)}
-                      className="btn border-none   text-black mt-6 flex font-semibold items-center justify-center bg-[#dbdbdb] hover:bg-[#853ab4] w-full p-2  cursor-pointer hover:text-white"
-                    >
-                      Upload{" "}
-                      <BiImageAdd
-                        size={27}
-                        className="ml-2 hover:text-white "
-                      />
-                    </button>
+                    {loading ? (
+                      <button
+                        
+                        style={{
+                          backgroundColor: "#853ab4!important",
+                          color: "white",
+                        }}
+                        onSubmit={(e) => handleVideoUpload(e)}
+                        className="btn border-none  cursor-no-drop  bg-[#853ab4]  flex items-center     mt-6  font-semibold  justify-center    w-full p-2    text-white"
+                      >
+                        <img
+                          src={loadingGIF}
+                          alt=""
+                          className="w-[33px] h-[33px]"
+                        />
+                        Loading..
+                      </button>
+                    ) : (
+                      <button
+                        onSubmit={(e) => handleVideoUpload(e)}
+                        className="btn border-none   text-black mt-6 flex font-semibold items-center justify-center bg-[#dbdbdb] hover:bg-[#853ab4] w-full p-2  cursor-pointer hover:text-white"
+                      >
+                        Upload{" "}
+                        <BiImageAdd
+                          size={27}
+                          className="ml-2 hover:text-white "
+                        />
+                      </button>
+                    )}
                   </div>
                 </div>
               </form>
@@ -122,20 +122,18 @@ function Panel() {
             {/* /End replace */}
           </div>
         </main>
-        {successnotify ? (
-          <ToastContainer
-            position="top-right"
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme="dark"
-          />
-        ) : null}
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
       </Panel_header>
     </>
   );

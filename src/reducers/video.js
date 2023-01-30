@@ -3,7 +3,9 @@ import axios from "axios";
 import { API } from "../components/Constant/API";
 
 const initialState = {
+  loading: false,
   videos: [],
+  message: "",
 };
 
 export const addVideos = createAsyncThunk("video/addVideos", async (file) => {
@@ -23,11 +25,21 @@ export const counterSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: {
+    [addVideos.pending]: (state, action) => {
+      state.loading = true;
+    },
     [addVideos.fulfilled]: (state, action) => {
       state.videos.push(action.payload);
+      state.loading = false;
+      state.message = "success";
     },
     [getVideos.fulfilled]: (state, action) => {
       state.videos = action.payload;
+    },
+    // for error
+    [addVideos.rejected]: (state, action) => {
+      state.loading = false;
+      state.message = "error";
     },
   },
   devTools: true,
