@@ -22,7 +22,7 @@ function Parameter() {
   };
 
   const notfiyGreater = () => {
-    toast.error("Please enter a number less than 100", {
+    toast.error("Please enter a number less than 100 Or equals to 100 ", {
       position: "top-right",
       autoClose: 5000,
       hideProgressBar: false,
