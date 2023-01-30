@@ -6,6 +6,7 @@ import { IoOptionsSharp } from "react-icons/io5";
 import { BsFillCloudDownloadFill, BsImages } from "react-icons/bs";
 import { Link, NavLink } from "react-router-dom";
 import lg from "../assets/images/lg2.png";
+import "../assets/css/panelHeader.css";
 function Panel_header({ children }) {
   return (
     <div>
@@ -45,7 +46,7 @@ function Panel_header({ children }) {
           <label
             htmlFor="menu-open"
             id="mobile-menu-button"
-            className="m-2 p-2 focus:outline-none hover:text-white hover:bg-gray-700 rounded-md"
+            className="m-2 p-2 focus:outline-none hover:text-white hover:bg-[#853ab4] rounded-md"
           >
             <svg
               id="menu-open-icon"
@@ -112,40 +113,45 @@ function Panel_header({ children }) {
               </span>
             </Link>
             <nav data-dev-hint="main navigation">
-              <Link
+              <NavLink
+                exact
+                activeClassName="active"
                 to="/dashboard"
-                className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white"
+                className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-[#853ab4] hover:text-white"
               >
                 <BiImageAdd />
                 <span>Upload File</span>
-              </Link>
+              </NavLink>
             </nav>
             <nav data-dev-hint="main navigation">
-              <Link
+              <NavLink
+                activeClassName="active"
                 to="/parameter"
-                className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white"
+                className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-[#853ab4] hover:text-white"
               >
                 <IoOptionsSharp />
                 <span>Select Parameter</span>
-              </Link>
+              </NavLink>
             </nav>
             <nav data-dev-hint="main navigation">
-              <Link
-                to="/dashboard"
-                className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700   hover:text-white"
+              <NavLink
+                activeClassName="active"
+                to="/summary"
+                className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-[#853ab4]   hover:text-white"
               >
                 <HiDocumentText />
                 <span>Summary</span>
-              </Link>
+              </NavLink>
             </nav>
             <nav data-dev-hint="main navigation">
-              <Link
-                to="/dashboard"
-                className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white"
+              <NavLink
+                activeClassName="active"
+                to="/download"
+                className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-[#853ab4] hover:text-white"
               >
                 <FiDownload />
                 <span>Download</span>
-              </Link>
+              </NavLink>
             </nav>
           </div>
         </aside>
