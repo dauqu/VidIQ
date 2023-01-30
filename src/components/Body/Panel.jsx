@@ -70,7 +70,7 @@ function Panel() {
               {file ? (
                 <>
                   {" "}
-                  <div className="flex items-center flex-col justify-center border-4 border-dashed border-gray-200 rounded-lg h-auto w-auto">
+                  <div className="flex items-center h-96 flex-col justify-center border-4 border-dashed border-gray-200 rounded-lg   w-auto">
                     <div>
                       {
                         // code to  display the uploaded video here
@@ -101,13 +101,13 @@ function Panel() {
                       name="file"
                       id=""
                       onChange={(e) => setFile(e.target.files[0])}
-                      className="mt-6 bg-[#dbdbdb] hover:bg-[#e6e6e6] w-full p-2 cursor-pointer"
+                      className="mt-6 bg-[#dbdbdb] hover:bg-[#e6e6e6] w-full p-2  cursor-pointer"
                     />
                   </div>
                   <div className="md:w-[25%] hover:text-white w-[25%]">
                     <button
                       onSubmit={(e) => handleVideoUpload(e)}
-                      className="btn border-none   text-black mt-6 flex font-semibold items-center justify-center bg-[#dbdbdb] hover:bg-[#853ab4] w-full p-2 cursor-pointer hover:text-white"
+                      className="btn border-none   text-black mt-6 flex font-semibold items-center justify-center bg-[#dbdbdb] hover:bg-[#853ab4] w-full p-2  cursor-pointer hover:text-white"
                     >
                       Upload{" "}
                       <BiImageAdd
