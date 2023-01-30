@@ -104,9 +104,12 @@ const Top_Content = () => {
 
         <div className="flex flex-wrap md:justify-start justify-center mt-6 p-2">
           {videos.map((video) => (
-            <div className="md:w-[300px] w-[280px]  md:m-4 m-2 hover:shadow-2xl   cursor-pointer shadow-2xl">
+            <div className="md:w-[300px]   w-[280px] max-h-[280px]  md:m-4 m-2 hover:shadow-2xl   cursor-pointer shadow-2xl">
               <video controls>
-                <source src={video.videoUrl} />
+                <source
+                  src={video.videoUrl}
+                  className="md:w-[300px] md:h-[300px] w-[280px] max-h-[157px]"
+                />
               </video>
             </div>
           ))}
