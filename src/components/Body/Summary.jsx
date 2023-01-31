@@ -11,19 +11,51 @@ function Summary() {
   const percent = state !== null ? state.percent : null;
 
   const [loading, setLoading] = useState(false);
+  const [sound, setSound] = useState(false);
+  const [video, setVideo] = useState(false);
+  const [download, setDownload] = useState(false);
   const handleloading = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 9000);
+    setSound(true);
+    setTimeout(() => {
+      setSound(false);
+    }, [3000]);
+    setVideo(true);
+    setTimeout(() => {
+      setVideo(false);
+      setDownload(true);
+    }, [3000]);
+    setDownload(true);
+    setTimeout(() => {
+      setDownload(false);
+      setVideo(true);
+    }, [5000]);
   };
 
   return (
     <>
       {loading ? (
         <>
-          <div className="w-screen h-screen fixed top-0 left-0 flex justify-center items-center">
-            <img src={round} alt="loading" />
+          <div className="w-screen h-screen fixed top-0 left-0 flex justify-center flex-col items-center">
+            <div>
+              <img src={round} alt="loading" />
+            </div>
+            <div>
+              {sound ? (
+                <h1 className="text-2xl font-semibold">Analysing the Sound</h1>
+              ) : null}
+              {video ? null : (
+                <h1 className="text-2xl font-semibold">Analysing the Video</h1>
+              )}
+              {download ? null : (
+                <h1 className="text-2xl font-semibold">
+                  Preparing for Download
+                </h1>
+              )}
+            </div>
           </div>
         </>
       ) : (
