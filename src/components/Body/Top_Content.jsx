@@ -84,7 +84,7 @@ const Top_Content = () => {
             </div>
           </div>
           <div className=" m-auto mt-4 text-center w-full   ">
-            <button className="flex items-center justify-center w-full border bg-[#2B9DFF] border-[#2B99F9] rounded-full m-auto   p-4 ">
+            <button className="flex items-center justify-center w-full border bg-[#1f2937] border-[#1f2937] rounded-full m-auto   p-4 ">
               <div className="  text-[16px] font-semibold text-white">
                 Signup
               </div>
@@ -104,11 +104,11 @@ const Top_Content = () => {
 
         <div className="flex flex-wrap md:justify-start justify-center mt-6 p-2">
           {videos.map((video) => (
-            <div className="md:w-[300px]   w-[280px] max-h-[280px]  md:m-4 m-2 hover:shadow-2xl   cursor-pointer shadow-2xl">
+            <div className="md:w-[300px]    w-[280px] max-h-[280px]  md:m-4 m-2 hover:shadow-2xl   cursor-pointer shadow-2xl">
               <video controls>
                 <source
                   src={video.videoUrl}
-                  className="md:w-[300px] md:h-[300px] w-[280px] max-h-[157px]"
+                  className="md:w-[300px] md:h-[300px]   w-[280px] max-h-[157px]"
                 />
               </video>
             </div>
