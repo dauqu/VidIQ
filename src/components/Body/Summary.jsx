@@ -18,21 +18,21 @@ function Summary() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 9000);
+    }, 4000);
     setSound(true);
     setTimeout(() => {
       setSound(false);
-    }, [3000]);
+    }, [1000]);
     setVideo(true);
     setTimeout(() => {
       setVideo(false);
       setDownload(true);
-    }, [3000]);
+    }, [1000]);
     setDownload(true);
     setTimeout(() => {
       setDownload(false);
       setVideo(true);
-    }, [5000]);
+    }, [2000]);
   };
 
   return (
