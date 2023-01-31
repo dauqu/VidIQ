@@ -11,14 +11,21 @@ import "react-toastify/dist/ReactToastify.css";
 import { useDispatch, useSelector } from "react-redux";
 import { addVideos, getVideos } from "../../reducers/video";
 import loadingGIF from "../assets/images/round.gif";
+import { useNavigate } from "react-router-dom";
 function Panel() {
   const [successnotify, setSuccessnotify] = useState(false);
   const { videos, loading, message } = useSelector((state) => state.video);
   const dispatch = useDispatch();
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     if (message == "success") {
       toast.success(message);
+      //Navigate to the next page after 2 seconds
+      setTimeout(() => {
+        navigate("/parameter");
+      }, 2000);
     } else if (message == "error") {
       toast.error(message);
     }
@@ -88,7 +95,7 @@ function Panel() {
                   <div className="md:w-[25%] hover:text-white w-[25%]">
                     {loading ? (
                       <button
-                        
+
                         style={{
                           backgroundColor: "#853ab4!important",
                           color: "white",

@@ -1,8 +1,14 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import New_Nav from "../Header/New_Nav";
 import Panel_header from "../Header/Panel_header";
 
 function Summary() {
+
+  const { state } = useLocation();
+  const { input, percent } = state;
+
+
   return (
     <div>
       <div>
@@ -19,7 +25,12 @@ function Summary() {
                 <code>
                   {`{
   "video": {
-     "summary":"You fight like a younger man",
+     "summary": {
+        "video": {
+            "type": "${input}",
+            "percentage": ${percent}
+        }
+     }
   }
 }`}
                 </code>
