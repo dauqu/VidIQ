@@ -14,6 +14,11 @@ function Parameter() {
   const [input, setInput] = useState("");
   const [percent, setPercent] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [videoAnalyse, setVideoAnalyse] = useState(false);
+  const [otherAnalyse, setOtherAnalyse] = useState(false);
+
+  const [sound, setSound] = useState(false);
+  const [download, setDownload] = useState(false);
   const navigate = useNavigate();
 
   const notfiyminus = () => {
@@ -124,7 +129,36 @@ function Parameter() {
                 }}
                 onClick={() => {
                   if (percent > 0 && input !== "") {
-                    setLoading(true);
+                    if (input == "video") {
+                      setLoading(true);
+
+                      setTimeout(() => {
+                        setVideoAnalyse(true);
+                      }, [1000]);
+
+                      setTimeout(() => {
+                        setVideoAnalyse(false);
+                        setSound(true);
+                      }, [2000]);
+                    } else {
+                      setOtherAnalyse(true);
+
+                      // setSound(true);
+                      setTimeout(() => {
+                        setSound(true);
+                      }, [1000]);
+
+                      setTimeout(() => {
+                        setSound(false);
+                        setVideoAnalyse(true);
+                      }, [1500]);
+
+                      setTimeout(() => {
+                        setSound(false);
+                        setVideoAnalyse(false);
+                        setDownload(true);
+                      }, [2000]);
+                    }
                     setTimeout(() => {
                       navigate(
                         `${input != "video" ? "/summary" : "/download"}`,
@@ -161,12 +195,53 @@ function Parameter() {
                       <img src={round} alt="" className="w-1/2 m-auto" />
                     </div>
                     <div>
-                      <p className="text-[20px] font-semibold">
-                        Summarising your video
-                      </p>
+                      {sound ? (
+                        <>
+                          <p className="text-[20px] font-semibold">
+                            Analyzing the Sound
+                          </p>
+                        </>
+                      ) : null}
+                      {videoAnalyse ? (
+                        <>
+                          <p className="text-[20px] font-semibold">
+                            Analyzing the Video
+                          </p>
+                        </>
+                      ) : null}
                     </div>
                   </div>
                 </>
+              ) : null}
+              {otherAnalyse ? (
+                <div className="flex flex-col justify-center items-center">
+                  <div>
+                    <img src={round} alt="" className="w-1/2 m-auto" />
+                  </div>
+                  <div>
+                    {sound ? (
+                      <>
+                        <p className="text-[20px] font-semibold">
+                          Analyzing the Sound
+                        </p>
+                      </>
+                    ) : null}
+                    {videoAnalyse ? (
+                      <>
+                        <p className="text-[20px] font-semibold">
+                          Analyzing the Video
+                        </p>
+                      </>
+                    ) : null}
+                    {download ? (
+                      <>
+                        <p className="text-[20px] font-semibold">
+                          Preparing to download the Video
+                        </p>
+                      </>
+                    ) : null}
+                  </div>
+                </div>
               ) : null}
             </div>
           </main>
