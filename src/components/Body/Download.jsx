@@ -21,6 +21,11 @@ function Download() {
                 <div className="md:text-[22px] text-[18px] font-semibold">
                   Your file will be downloaded from here.
                 </div>
+                <div>
+                  <button className="btn bg-[#2b9dff] border-none font-semibold text-white px-4 py-2 rounded-lg mt-4">
+                    Download
+                  </button>
+                </div>
               </div>
             </div>
           </div>
