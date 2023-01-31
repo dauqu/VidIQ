@@ -95,7 +95,7 @@ function Summary() {
                   }}
                   onClick={handleloading}
                 >
-                  Analyze
+                  Proceed to Download
                 </button>
               </div>
             </main>
