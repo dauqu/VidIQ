@@ -1,9 +1,11 @@
 import React from "react";
 import { CiImageOn } from "react-icons/ci";
+import { useSelector } from "react-redux";
 import New_Nav from "../Header/New_Nav";
 import Panel_header from "../Header/Panel_header";
 
 function Download() {
+  const { currentVideo } = useSelector((state) => state.video);
   return (
     <div>
       <div>
@@ -22,9 +24,14 @@ function Download() {
                   Your file will be downloaded from here.
                 </div>
                 <div>
-                  <button className="btn bg-[#2b9dff] border-none font-semibold text-white px-4 py-2 rounded-lg mt-4">
+                  <a
+                    href={currentVideo.videoUrl}
+                    download
+                    target="_blank"
+                    className="btn bg-[#2b9dff] border-none font-semibold text-white px-4 py-2 rounded-lg mt-4"
+                  >
                     Download
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>

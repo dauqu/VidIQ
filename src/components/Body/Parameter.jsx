@@ -4,14 +4,16 @@ import Panel_header from "../Header/Panel_header";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
+import round from "../assets/images/round.gif";
 import { useNavigate } from "react-router-dom";
+import video from "../../reducers/video";
 function Parameter() {
   const [minusToast, setMinusToast] = useState(false); // state to show toast when input is negative
   const [greaterToast, setGreaterToast] = useState(false); // state to show toast when input is greater than 100
 
   const [input, setInput] = useState("");
   const [percent, setPercent] = useState(0);
-
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const notfiyminus = () => {
@@ -69,11 +71,14 @@ function Parameter() {
                 </div>
                 <div className="ml-6">
                   <div className="">
-                    <select name="" id="" className="bg-[#dbdbdb]  p-2" onChange={
-                      (e) => {
+                    <select
+                      name=""
+                      id=""
+                      className="bg-[#dbdbdb]  p-2"
+                      onChange={(e) => {
                         setInput(e.target.value);
-                      }
-                    }>
+                      }}
+                    >
                       <option value="" className="bg-white">
                         Types
                       </option>
@@ -108,38 +113,61 @@ function Parameter() {
                   />
                 </div>
               </div>
-              <button style={{
-                backgroundColor: "#dbdbdb",
-                color: "black",
-                padding: "14px 20px",
-                margin: "8px 0",
-                border: "none",
-                cursor: "pointer",
-              }} onClick={() => {
-                if (percent > 0 && input !== "") {
+              <button
+                style={{
+                  backgroundColor: "#dbdbdb",
+                  color: "black",
+                  padding: "14px 20px",
+                  margin: "8px 0",
+                  border: "none",
+                  cursor: "pointer",
+                }}
+                onClick={() => {
+                  if (percent > 0 && input !== "") {
+                    setLoading(true);
+                    setTimeout(() => {
+                      navigate(
+                        `${input != "video" ? "/summary" : "/download"}`,
+                        {
+                          state: {
+                            input: input,
+                            percent: percent,
+                          },
+                        }
+                      );
+                    }, [3000]);
 
-                  //Pass data to next page
-                  navigate("/summary", {
-                    state: {
-                      input: input,
-                      percent: percent,
-                    },});
-                    
-                } else {
-                  toast.error("Please enter a positive number", {
-                    position: "top-right",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "dark",
-                  });
-                }
-              }}>
+                    //Pass data to next page
+                  } else {
+                    toast.error("Please enter a positive number", {
+                      position: "top-right",
+                      autoClose: 5000,
+                      hideProgressBar: false,
+                      closeOnClick: true,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                      theme: "dark",
+                    });
+                  }
+                }}
+              >
                 Submit Parameters
               </button>
+              {loading ? (
+                <>
+                  <div className="flex flex-col justify-center items-center">
+                    <div>
+                      <img src={round} alt="" className="w-1/2 m-auto" />
+                    </div>
+                    <div>
+                      <p className="text-[20px] font-semibold">
+                        Summarising your video
+                      </p>
+                    </div>
+                  </div>
+                </>
+              ) : null}
             </div>
           </main>
           {minusToast ? (

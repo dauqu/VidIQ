@@ -6,6 +6,7 @@ const initialState = {
   loading: false,
   videos: [],
   message: "",
+  currentVideo: null,
 };
 
 export const addVideos = createAsyncThunk("video/addVideos", async (file) => {
@@ -30,6 +31,7 @@ export const counterSlice = createSlice({
     },
     [addVideos.fulfilled]: (state, action) => {
       state.videos.push(action.payload);
+      state.currentVideo = action.payload;
       state.loading = false;
       state.message = "success";
     },
