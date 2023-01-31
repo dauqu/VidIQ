@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import New_Nav from "../Header/New_Nav";
 import Panel_header from "../Header/Panel_header";
 import round from "../assets/images/round.gif";
 function Summary() {
   const { state } = useLocation();
-
+  const navigate = useNavigate();
   //Check if the state is not null
   const input = state !== null ? state.input : null;
   const percent = state !== null ? state.percent : null;
@@ -32,6 +32,7 @@ function Summary() {
     setTimeout(() => {
       setDownload(false);
       setVideo(true);
+      navigate("/download");
     }, [2000]);
   };
 
