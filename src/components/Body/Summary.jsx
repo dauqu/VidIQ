@@ -6,9 +6,16 @@ import Panel_header from "../Header/Panel_header";
 function Summary() {
 
   const { state } = useLocation();
-  //Chek state is not undefined
-  const { input, percent } = state || {};
   
+  //Check if the state is not null
+  const input = state !== null ? state.input : null;
+  const percent = state !== null ? state.percent : null;
+
+
+
+
+
+
 
 
   return (
@@ -28,10 +35,8 @@ function Summary() {
                   {`{
   "video": {
      "summary": {
-        "video": {
-            "type": "${!input}",
-            "percentage": ${!percent}
-        }
+        "input": "${input}",
+        "percent": ${percent},
      }
   }
 }`}
