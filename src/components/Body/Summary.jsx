@@ -6,7 +6,7 @@ import Panel_header from "../Header/Panel_header";
 function Summary() {
 
   const { state } = useLocation();
-  
+
   //Check if the state is not null
   const input = state !== null ? state.input : null;
   const percent = state !== null ? state.percent : null;
@@ -43,6 +43,16 @@ function Summary() {
                 </code>
               </pre>
             </div>
+            <button style={{
+              backgroundColor: "#4CAF50",
+              color: "white",
+              padding: "15px 32px",
+              textAlign: "center",
+              textDecoration: "none",
+              marginTop: "20px",
+            }}>
+              Analyze
+            </button>
           </div>
         </main>
       </Panel_header>
