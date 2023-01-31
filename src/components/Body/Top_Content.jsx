@@ -22,7 +22,7 @@ const Top_Content = () => {
             <br /> by identifying important moments using AI
           </div>
           <div className="md:w-[100%] flex flex-wrap  m-auto w-full md:text-[22px]  text-[17px] font-semibold">
-            <div className="card md:m-2  md:mt:0 mt-4 md:w-80  w-72  m-auto bg-[#cea9fe] ">
+            <div className="card md:m-2  hover:shadow-xl md:mt:0 mt-4 md:w-80  w-72  m-auto bg-[#cea9fe] ">
               <figure className="px-10 pt-10">
                 <BsCloudDownloadFill size={50} />
               </figure>
@@ -34,7 +34,7 @@ const Top_Content = () => {
                 </p>
               </div>
             </div>
-            <div className="card md:m-2  md:mt:0 mt-4 md:w-80  w-72  m-auto bg-[#fecca9] ">
+            <div className="card md:m-2   hover:shadow-xl md:mt:0 mt-4 md:w-80  w-72  m-auto bg-[#fecca9] ">
               <figure className="px-10 pt-10">
                 <BsCloudDownloadFill size={50} />
               </figure>
@@ -51,7 +51,7 @@ const Top_Content = () => {
 
         <div className="md:w-[40%] md:mt-0 mt-8 w-full  ">
           <div className=" m-auto w-full   ">
-            <button className="flex items-center justify-center w-full border border-[#2B99F9] rounded-full m-auto bg-[#2D3756] p-4 ">
+            <button className="btn flex items-center justify-center w-full border border-[#2B99F9] rounded-full m-auto bg-[#2D3756]  ">
               <div className="w-[17px] mr-2 ">
                 <img src={google} alt="" srcset="" />
               </div>
@@ -66,14 +66,14 @@ const Top_Content = () => {
           <div className=" m-auto mt-4 text-center w-full   ">
             <input
               type="text"
-              className=" border border-[#2B99F9]  text-white font-semibold rounded-full m-auto w-full bg-[#2D3756] p-4"
+              className="input input-bordered    border border-[#2B99F9]  text-white font-semibold rounded-full m-auto w-full bg-[#2D3756] p-4"
               placeholder="Enter Email address"
             />
           </div>
           <div className=" m-auto mt-4 text-center w-full   ">
             <input
               type="text"
-              className=" border border-[#2B99F9] text-white font-semibold rounded-full m-auto w-full bg-[#2D3756] p-4"
+              className="input input-bordered  border border-[#2B99F9] text-white font-semibold rounded-full m-auto w-full bg-[#2D3756] p-4"
               placeholder="Enter a password"
             />
           </div>
@@ -84,7 +84,7 @@ const Top_Content = () => {
             </div>
           </div>
           <div className=" m-auto mt-4 text-center w-full   ">
-            <button className="flex items-center justify-center w-full border bg-[#1f2937] border-[#1f2937] rounded-full m-auto   p-4 ">
+            <button className="btn flex items-center justify-center w-full border bg-[#1f2937] border-[#1f2937] rounded-full m-auto    ">
               <div className="  text-[16px] font-semibold text-white">
                 Signup
               </div>
@@ -104,11 +104,11 @@ const Top_Content = () => {
 
         <div className="flex flex-wrap md:justify-start justify-center mt-6 p-2">
           {videos.map((video) => (
-            <div className="md:w-[300px]    w-[280px] max-h-[280px]  md:m-4 m-2 hover:shadow-2xl   cursor-pointer shadow-2xl">
+            <div className="md:w-[300px]    w-[280px] max-h-[280px]  md:m-4 m-2  hover:shadow-slate-800  cursor-pointer  shadow-lg">
               <video controls>
                 <source
                   src={video.videoUrl}
-                  className="md:w-[300px] md:h-[300px]   w-[280px] max-h-[157px]"
+                  className="md:w-[300px] md:h-[300px]    w-[280px] max-h-[157px]"
                 />
               </video>
             </div>
