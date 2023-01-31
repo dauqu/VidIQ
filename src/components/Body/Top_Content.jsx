@@ -92,6 +92,7 @@ const Top_Content = () => {
                 <BsArrowRightShort
                   color="white"
                   size={24}
+                  // size={24}
                   className="font-bold"
                 />
               </div>
