@@ -35,8 +35,8 @@ function Summary() {
                   {`{
   "video": {
      "summary": {
-        "input": "${input}",
-        "percent": ${percent},
+        "video": "${input}",
+        "percentage": ${percent},
      }
   }
 }`}
