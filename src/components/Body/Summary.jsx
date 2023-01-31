@@ -50,7 +50,12 @@ function Summary() {
               textAlign: "center",
               textDecoration: "none",
               marginTop: "20px",
-            }}>
+            }} onClick={
+              () => {
+                //Shoe loading animation
+                
+              }
+            }>
               Analyze
             </button>
           </div>
