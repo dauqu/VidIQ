@@ -143,7 +143,7 @@ function Panel_header({ children }) {
                 <span>Summary</span>
               </NavLink>
             </nav>
-            {/* <nav data-dev-hint="main navigation">
+            <nav data-dev-hint="main navigation">
               <NavLink
                 activeClassName="active"
                 to="/download"
@@ -152,7 +152,7 @@ function Panel_header({ children }) {
                 <FiDownload />
                 <span>Download</span>
               </NavLink>
-            </nav> */}
+            </nav>
           </div>
         </aside>
         <>{children}</>

@@ -26,8 +26,8 @@ function Download() {
                 <div>
                   <a
                     href={currentVideo.videoUrl}
-                    download
-                    target="_blank"
+                    download={currentVideo.videoName}
+                    // target="_blank"
                     className="btn bg-[#2b9dff] border-none font-semibold text-white px-4 py-2 rounded-lg mt-4"
                   >
                     Download
