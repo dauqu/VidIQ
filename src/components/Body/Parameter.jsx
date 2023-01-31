@@ -79,21 +79,33 @@ function Parameter() {
                     <select
                       name=""
                       id=""
-                      className="bg-[#dbdbdb]  p-2"
+                      className="btn   border-none  hover:bg-[#853ab4] text-[17px]  text-white bg-[#853ab4]  p-2"
                       onChange={(e) => {
                         setInput(e.target.value);
                       }}
                     >
-                      <option value="" className="bg-white">
+                      <option
+                        value=""
+                        className="bg-[#1f2937]   text-[15px]  font-semibold  text-left "
+                      >
                         Types
                       </option>
-                      <option value="video" className="bg-white">
+                      <option
+                        value="video"
+                        className="bg-[#1f2937] text-[15px]  font-semibold mt-4 text-left"
+                      >
                         Video
                       </option>
-                      <option value="news" className="bg-white">
+                      <option
+                        value="news"
+                        className="bg-[#1f2937] text-[15px]  font-semibold mt-4 text-left"
+                      >
                         News
                       </option>
-                      <option value="webnar" className="bg-white">
+                      <option
+                        value="webinar"
+                        className="bg-[#1f2937] text-[15px]  font-semibold mt-4 text-left"
+                      >
                         Webinar
                       </option>
                     </select>
@@ -107,10 +119,11 @@ function Parameter() {
                     type="number"
                     name=""
                     id=""
-                    className="h-[40px] p-2 w-[88px]"
+                    className="input input-bordered   max-w-xs h-[40px] p-2 w-[128px]"
                     placeholder="100%"
                     min={0}
                     max={100}
+                    required
                     onChange={(e) => {
                       validation(e);
                       setPercent(e.target.value);
@@ -119,11 +132,12 @@ function Parameter() {
                 </div>
               </div>
               <button
+                className="btn mt-8  "
                 style={{
-                  backgroundColor: "#dbdbdb",
-                  color: "black",
+                  backgroundColor: "#853ab4",
+                  color: "white",
                   padding: "14px 20px",
-                  margin: "8px 0",
+
                   border: "none",
                   cursor: "pointer",
                 }}

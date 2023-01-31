@@ -114,7 +114,7 @@ export default function New_Nav() {
 
             <li className="px-2    ">
               <Link to="/dashboard">
-                <button className=" bg-[#2B9DFF] hover:bg-[#2B9DFF] p-2 rounded-full px-6 text-center  text-white font-bold ">
+                <button className="btn border-none bg-[#1f2937] hover:bg-[#1f2937] p-2 rounded-full px-6 text-center  text-white font-bold ">
                   Get Started
                 </button>
               </Link>

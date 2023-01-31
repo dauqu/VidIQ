@@ -1,6 +1,7 @@
 import React from "react";
 import { CiImageOn } from "react-icons/ci";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import New_Nav from "../Header/New_Nav";
 import Panel_header from "../Header/Panel_header";
 
@@ -28,12 +29,14 @@ function Download() {
                       Please upload video first.
                     </div>
                     <div>
-                      <div
-                        // target="_blank"
-                        className="btn bg-[#2b9dff] border-none font-semibold text-white px-4 py-2 rounded-lg mt-4"
-                      >
-                        Download
-                      </div>
+                      <Link to="/dashboard">
+                        <div
+                          // target="_blank"
+                          className="btn bg-[#853ab4] border-none font-semibold text-white px-4 py-2 rounded-lg mt-4"
+                        >
+                          Download
+                        </div>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -56,7 +59,7 @@ function Download() {
                         href={currentVideo.videoUrl}
                         download={currentVideo.videoName}
                         // target="_blank"
-                        className="btn bg-[#2b9dff] border-none font-semibold text-white px-4 py-2 rounded-lg mt-4"
+                        className="btn bg-[#853ab4] border-none font-semibold text-white px-4 py-2 rounded-lg mt-4"
                       >
                         Download
                       </a>

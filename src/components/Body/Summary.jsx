@@ -86,8 +86,9 @@ function Summary() {
                 </div>
 
                 <button
+                className="btn border-none"
                   style={{
-                    backgroundColor: "#4CAF50",
+                    backgroundColor: "#853ab4",
                     color: "white",
                     padding: "15px 32px",
                     textAlign: "center",
