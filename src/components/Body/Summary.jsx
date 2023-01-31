@@ -53,7 +53,14 @@ function Summary() {
             }} onClick={
               () => {
                 //Shoe loading animation
-                
+                return (
+                  <div>
+                    {/* Loading spiner */}
+                    <div className="flex justify-center items-center w-full h-full bg-black absolute">
+                      dfgfgf
+                    </div>
+                  </div>
+                );
               }
             }>
               Analyze
